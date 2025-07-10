@@ -51,6 +51,13 @@ runconfig:
 
         processing:
 
+            # hardcoded for RSLC_ALPSRP272950690-L1.h5
+            output_grid:
+              start_time: 2011-03-10T06:13:44.0
+              end_time:   2011-03-10T06:13:45.0
+              start_range: 871016.0
+              end_range:   872016.0
+
             # Processing stage switches, mostly for debug.
             # Any missing stages assumed True
             is_enabled:
