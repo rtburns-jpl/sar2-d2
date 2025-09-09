@@ -113,7 +113,11 @@ fi
 # arguments.
 
 # shellcheck disable=SC2086
-"${basedir}"/bin/conda/run.sh python "${basedir}/src/alos1_2_gcov/alos1_to_gcov.py" \
+
+conda list -n sar2-d2 cuda
+
+conda run --name sar2-d2 python \
+    "${basedir}/src/alos1_2_gcov/alos1_to_gcov.py" \
     --in-file "${in_file}" \
     --bbox ${bbox} \
     --out-dir "${output_dir}" \
