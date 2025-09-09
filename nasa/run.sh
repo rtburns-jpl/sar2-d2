@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
-set -Eeuo pipefail
+set -xEeuo pipefail
 
 basedir=$(dirname "$(dirname "$(readlink -f "$0")")")
 input_dir="${PWD}/input"
 output_dir="${PWD}/output"
+
+# create output dir
+mkdir -p "${output_dir}"
 
 if [[ $# == 0 || "$1" == "-h" ]]; then
     echo "usage: nasa/run.sh [-h] INPUT_FILE LEFT BOTTOM RIGHT TOP INPUT_PRODUCT_TYPE OUTPUT_PRODUCT_TYPE GCOV_POSTING

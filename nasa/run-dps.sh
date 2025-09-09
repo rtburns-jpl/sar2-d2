@@ -3,7 +3,7 @@
 # This script is a wrapper around run.sh, which hardcodes
 # the conda environment for use with MAAP DPS.
 
-set -Eeuo pipefail
+set -xEeuo pipefail
 
 thisdir=$(dirname "$(readlink -f "$0")")
 

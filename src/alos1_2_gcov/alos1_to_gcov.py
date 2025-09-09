@@ -147,7 +147,7 @@ def alos1_to_l0b(input_alos1_path, output_l0b_path):
               ]
     
     # Run the command and wait for it to complete
-    result = subprocess.run(command, capture_output=True, text=True)
+    result = subprocess.run(command, text=True)
     
     # Check for errors
     if result.returncode != 0:
@@ -215,7 +215,7 @@ def l0b_to_rslc(input_l0b_path, output_rslc_path, dem_file):
               ]
     
     # Run the command and wait for it to complete
-    result = subprocess.run(command, capture_output=True, text=True)
+    result = subprocess.run(command, text=True)
     
     # Check for errors
     if result.returncode != 0:
@@ -274,7 +274,7 @@ def generate_gcov_runconfig(
               ]
     
     # Run the command and wait for it to complete
-    result = subprocess.run(command, capture_output=True, text=True)
+    result = subprocess.run(command, text=True)
     
     # Check for errors
     if result.returncode != 0:
@@ -334,7 +334,7 @@ def rslc_to_gcov(
               ]
     
     # Run the command and wait for it to complete
-    result = subprocess.run(command, capture_output=True, text=True)
+    result = subprocess.run(command, text=True)
     
     # Check for errors
     if result.returncode != 0:
